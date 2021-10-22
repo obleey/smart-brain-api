@@ -1,5 +1,6 @@
 const express = require('express');
 const bcrypt = require('bcrypt-node');
+const cors = require('cors');
 const database = {
   users: [
     {
@@ -22,6 +23,7 @@ const database = {
 };
 const app = express();
 
+app.use(cors);
 app.use(express.json());
 //Signin
 app.post('/signin', (req, res) => {
