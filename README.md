@@ -11,7 +11,7 @@ This is the final project for the ZTM course: The Complete Web Developer in 2021
 2. Run `npm install`
 3. Run `npm start`
 
-**Note:
+**Note:**
 
 Use it with the [facerecognitionapp] (https://github.com/obleey/facerecognitionapp)
 
