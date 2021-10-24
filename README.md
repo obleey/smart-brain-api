@@ -4,4 +4,15 @@ This is the final project for the ZTM course: The Complete Web Developer in 2021
 
 **Libraries/framework used:**
 
-[Express](https://expressjs.com/)
+[Express.js](https://expressjs.com/)
+
+**Installation:**
+1. Clone this repo
+2. Run `npm install`
+3. Run `npm start`
+
+**Note:
+
+Use it with the [facerecognitionapp] (https://github.com/obleey/facerecognitionapp)
+
+have fun :))
