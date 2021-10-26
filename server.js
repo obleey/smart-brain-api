@@ -1,26 +1,25 @@
 const express = require('express');
 const bcrypt = require('bcrypt-node');
 const cors = require('cors');
-const database = {
-  users: [
-    {
-      id: '123',
-      name: 'john',
-      email: 'john@gmail.com',
-      password: 'cookies',
-      entries: 0,
-      joined: new Date(),
-    },
-    {
-      id: '124',
-      name: 'sally',
-      email: 'sally@gmail.com',
-      password: 'bananas',
-      entries: 0,
-      joined: new Date(),
-    },
-  ],
-};
+const knex = require('knex');
+
+const db = knex({
+  client: 'pg',
+  connection: {
+    host: '127.0.0.1',
+    port: 5432,
+    user: 'obleey',
+    password: '',
+    database: 'smart-brain',
+  },
+});
+
+db.select('*')
+  .from('users')
+  .then((data) => {
+    console.log(data);
+  });
+
 const app = express();
 
 app.use(cors());
@@ -31,26 +30,23 @@ app.post('/signin', (req, res) => {
     req.body.email === database.users[0].email &&
     req.body.password === database.users[0].password
   )
-    // res.json('success');
     res.json(database.users[0]);
   else res.status(400).json('error logging in');
 });
 //Register
 app.post('/register', (req, res) => {
   const { email, name, password } = req.body;
-  bcrypt.hash('bacon', null, null, function (err, hash) {
-    // Store hash in your password DB.
-    console.log(hash);
-  });
-  database.users.push({
-    id: 125,
-    name: name,
-    email: email,
-    // password: password,
-    entries: 0,
-    joined: new Date(),
-  });
-  res.json(database.users[database.users.length - 1]);
+  db('users')
+    .returning('*')
+    .insert({
+      email: email,
+      name: name,
+      joined: new Date(),
+    })
+    .then((user) => {
+      res.json(user[0]);
+    })
+    .catch((err) => res.status(400).json('unable to register'));
 });
 //Root
 app.get('/', (req, res) => {
