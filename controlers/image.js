@@ -8,7 +8,6 @@ metadata.set('authorization', 'Key YOUR_API_KEY');
 const handleImageApi = (req, res) => {
   stub.PostModelOutputs(
     {
-      // This is the model ID of a publicly available General model. You may use any other public or custom model ID.
       model_id: 'a403429f2ddf4b49b307e318f00e528b', //FACE_DETECT_MODEL
       inputs: [{ data: { image: { url: req.body.input } } }],
     },
