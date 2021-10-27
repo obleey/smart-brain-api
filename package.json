@@ -18,7 +18,6 @@
   "homepage": "https://github.com/obleey/smart-brain-api#readme",
   "dependencies": {
     "bcrypt-node": "^0.1.0",
-    "clarifai": "^2.9.1",
     "clarifai-nodejs-grpc": "^7.9.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
