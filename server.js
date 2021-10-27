@@ -11,7 +11,7 @@ const db = knex({
   connection: {
     host: '127.0.0.1',
     port: 5432,
-    user: '',
+    user: 'obleey',
     password: '',
     database: 'smart-brain',
   },
@@ -41,6 +41,10 @@ app.get('/profile/:id', (req, res) => {
 
 app.put('/image', (req, res) => {
   image.handleImage(req, res, db);
+});
+
+app.post('/imageurl', (req, res) => {
+  image.handleImageApi(req, res);
 });
 
 app.listen(3000, () => {
