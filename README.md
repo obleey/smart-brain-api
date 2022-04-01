@@ -1,26 +1,28 @@
-# smart-brain-api
 
-This is the final project for the ZTM course: The Complete Web Developer in 2021: Zero to Mastery. This is the Backend part of the project.
+##  smart-brain-api
+Backend part of the [Facerecognitionapp](https://github.com/obleey/facerecognitionapp)
+![Facerecognition App](https://i.imgur.com/SMQ5aA7.png)
+[Live](https://miha-facerecognitionapp.herokuapp.com/)
+**Libraries**:
+-   **express.js**: simple backend server
+- **Clarifai Node.js gRPC Client**: This is the official Clarifai gRPC Node.js client for interacting with the Clarifai API.
 
-**Libraries/framework used:**
+## Instalation
 
-[Express.js](https://expressjs.com/)
-[Clarifai-nodejs-grpc](https://www.npmjs.com/package/clarifai-nodejs-grpc)
-
-**Installation:**
-1. Clone this repo
-2. Run `npm install`
-3. Run `npm start`
-
-**Note:**
-
-Use it with the [facerecognitionapp](https://github.com/obleey/facerecognitionapp)
+ `fork` or `clone` this repo. 
 
 
-**API's used:**
+**Dev build:**
 
-[Clarifai Face detection model](https://www.clarifai.com/models/ai-face-detection)
+run  `nmp run start`
 
-Note: You will need your own API key for this to work. Simply register on the Clarifai app, and you will get it. It's free
+**Prod build:**
 
-have fun :))
+run  `nmp run deploy`
+
+## Authors
+[Miha Oblišar - @mihaoblisar](www.linkedin.com/in/miha-obli%C5%A1ar-8b177610a)
+
+## Licence
+This project is open-sourced under the [MIT license](https://opensource.org/licenses/MIT).
+
