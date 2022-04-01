@@ -3,6 +3,7 @@
 Backend part of the [Facerecognitionapp](https://github.com/obleey/facerecognitionapp)
 ![Facerecognition App](https://i.imgur.com/SMQ5aA7.png)
 [Live](https://miha-facerecognitionapp.herokuapp.com/)
+
 **Libraries**:
 -   **express.js**: simple backend server
 - **Clarifai Node.js gRPC Client**: This is the official Clarifai gRPC Node.js client for interacting with the Clarifai API.
